@@ -24,7 +24,7 @@
     "dev": "node server",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "babel-loader": "^7.1.5",
