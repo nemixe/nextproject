@@ -18,6 +18,7 @@ export default class extends React.Component {
         </Head>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <Navbar />
+
         {this.props.children}
       </div>
     )
