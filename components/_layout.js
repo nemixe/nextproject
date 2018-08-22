@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/styles.scss'
 import Navbar from './Navbar';
 
+
 export default class extends React.Component {
   render() {
     return (
@@ -15,6 +16,7 @@ export default class extends React.Component {
           <meta name="theme-color" content="#ff6600" />
           <link rel="manifest" href="static/manifest.json" />
           <link rel="icon" href="static/img/favicon.ico" />
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <Navbar />

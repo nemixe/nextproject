@@ -1,6 +1,11 @@
 const path = require('path')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const glob = require('glob')
+const withCss = require('@zeit/next-css')
+
+if (typeof require !== 'undefined') {
+	require.extensions['.css'] = (file) => { }
+}
 
 module.exports = {
 	webpack: (config, { buildId, dev }) => {
@@ -34,13 +39,13 @@ module.exports = {
 		}
 
 		config.module.rules.push(
-			{
-				test: /\.(css|scss)/,
-				loader: 'emit-file-loader',
-				options: {
-					name: 'dist/[path][name].[ext]'
-				}
-			},
+			// {
+			// 	test: /\.(css|scss)/,
+			// 	loader: 'emit-file-loader',
+			// 	options: {
+			// 		name: 'dist/[path][name].[ext]'
+			// 	}
+			// },
 			{
 				test: /\.css$/,
 				use: ['babel-loader', 'raw-loader', 'postcss-loader']
