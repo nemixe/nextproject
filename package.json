@@ -6,10 +6,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-css": "^0.2.0",
     "antd": "^3.8.2",
     "autoprefixer": "^9.1.2",
     "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.8.0",
     "classnames": "^2.2.6",
     "glob": "^7.1.2",
     "next": "^7.0.0-canary.0",

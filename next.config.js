@@ -1,11 +1,6 @@
 const path = require('path')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const glob = require('glob')
-const withCss = require('@zeit/next-css')
-
-if (typeof require !== 'undefined') {
-	require.extensions['.css'] = (file) => { }
-}
 
 module.exports = {
 	webpack: (config, { buildId, dev }) => {
